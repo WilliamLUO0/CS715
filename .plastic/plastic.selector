@@ -1,0 +1,4 @@
+repository "PokemonGoMap@ssl://wechat_os_qy0_gm9y51wrj71pt3sepkt7w@sh01-plasticscm.unity.cn:8787"
+  path "/"
+    br "/main"
+    co "/main"
