@@ -1,0 +1,397 @@
+fileFormatVersion: 2
+guid: 3d111f24342fa1546b7060365b413294
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: LittleTurtle
+    100004: LK
+    100006: LK Head
+    100008: LK L Calf
+    100010: LK L Clavicle
+    100012: LK L Foot
+    100014: LK L Forearm
+    100016: LK L Hand
+    100018: LK L Thigh
+    100020: LK L Toe0
+    100022: LK L UpperArm
+    100024: LK Neck
+    100026: LK Pelvis
+    100028: LK R Calf
+    100030: LK R Clavicle
+    100032: LK R Foot
+    100034: LK R Forearm
+    100036: LK R Hand
+    100038: LK R Thigh
+    100040: LK R Toe0
+    100042: LK R UpperArm
+    100044: LK Spine
+    100046: LK R Toe0Nub
+    100048: polySurface27
+    100050: LittleTurtle_mesh
+    400000: //RootNode
+    400002: LittleTurtle
+    400004: LK
+    400006: LK Head
+    400008: LK L Calf
+    400010: LK L Clavicle
+    400012: LK L Foot
+    400014: LK L Forearm
+    400016: LK L Hand
+    400018: LK L Thigh
+    400020: LK L Toe0
+    400022: LK L UpperArm
+    400024: LK Neck
+    400026: LK Pelvis
+    400028: LK R Calf
+    400030: LK R Clavicle
+    400032: LK R Foot
+    400034: LK R Forearm
+    400036: LK R Hand
+    400038: LK R Thigh
+    400040: LK R Toe0
+    400042: LK R UpperArm
+    400044: LK Spine
+    400046: LK R Toe0Nub
+    400048: polySurface27
+    400050: LittleTurtle_mesh
+    4300000: LittleTurtle
+    4300002: polySurface27
+    4300004: LittleTurtle_mesh
+    9500000: //RootNode
+    13700000: LittleTurtle
+    13700002: polySurface27
+    13700004: LittleTurtle_mesh
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 3
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human:
+    - boneName: LK Pelvis
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LK L Thigh
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LK R Thigh
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LK L Calf
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LK R Calf
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LK L Foot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LK R Foot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LK Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LK Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LK Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LK L Clavicle
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LK R Clavicle
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LK L UpperArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LK R UpperArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LK L Forearm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LK R Forearm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LK L Hand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LK R Hand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LK L Toe0
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LK R Toe0
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: LittleTurtle(Clone)
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: LittleTurtle
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 2.18556941e-08, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: LK
+      position: {x: 1.54433091e-24, y: .463034153, z: -.0069421879}
+      rotation: {x: -.5, y: .5, z: .5, w: .5}
+      scale: {x: .99999994, y: .99999994, z: 1}
+      transformModified: 1
+    - name: LK Pelvis
+      position: {x: -9.31322575e-10, y: 3.38783453e-16, z: -5.96046448e-08}
+      rotation: {x: .499999315, y: -.500000715, z: -.499999374, w: -.500000715}
+      scale: {x: .999999881, y: 1, z: 1}
+      transformModified: 1
+    - name: LK L Thigh
+      position: {x: -1.24193662e-07, y: 2.91114816e-07, z: .208188266}
+      rotation: {x: -.00682335999, y: .999976695, z: -6.25614177e-07, w: -3.89524857e-08}
+      scale: {x: 1.00000012, y: 1, z: 1.00000024}
+      transformModified: 1
+    - name: LK L Calf
+      position: {x: -.213117585, y: 2.01712513e-08, z: 3.35293038e-08}
+      rotation: {x: 3.76710148e-08, y: 4.73533168e-09, z: .139572397, w: .990211844}
+      scale: {x: 1.00000012, y: .999999762, z: 1}
+      transformModified: 1
+    - name: LK L Foot
+      position: {x: -.159611121, y: -5.32962794e-08, z: -2.47526444e-08}
+      rotation: {x: -5.72264085e-08, y: -5.37526361e-08, z: -.132812589, w: .99114114}
+      scale: {x: 1.00000036, y: 1.00000024, z: .999999881}
+      transformModified: 1
+    - name: LK L Toe0
+      position: {x: -.0950456634, y: .129320368, z: 3.83368253e-08}
+      rotation: {x: 4.48161103e-07, y: 5.63363358e-07, z: -.707106769, w: .707106888}
+      scale: {x: .999999881, y: .999999881, z: 1}
+      transformModified: 1
+    - name: LK R Thigh
+      position: {x: -1.44027254e-07, y: -2.54327574e-07, z: -.208188266}
+      rotation: {x: -.00682335999, y: .999976695, z: -6.25614177e-07, w: -3.89524857e-08}
+      scale: {x: 1.00000012, y: 1, z: 1.00000024}
+      transformModified: 1
+    - name: LK R Calf
+      position: {x: -.21311757, y: 1.57184612e-08, z: 3.72697118e-09}
+      rotation: {x: 3.76710148e-08, y: 4.73533168e-09, z: .139572397, w: .990211844}
+      scale: {x: 1.00000012, y: .999999762, z: 1}
+      transformModified: 1
+    - name: LK R Foot
+      position: {x: -.159611121, y: -1.69560703e-08, z: -9.92584717e-08}
+      rotation: {x: -5.72264085e-08, y: -5.37526361e-08, z: -.132812589, w: .99114114}
+      scale: {x: 1.00000036, y: 1.00000024, z: .999999881}
+      transformModified: 1
+    - name: LK R Toe0
+      position: {x: -.0950456485, y: .129320368, z: 5.32379723e-08}
+      rotation: {x: 4.79069683e-07, y: 5.32454749e-07, z: -.707106769, w: .707106888}
+      scale: {x: .999999881, y: .999999881, z: 1}
+      transformModified: 1
+    - name: LK Spine
+      position: {x: -.100485452, y: -.00026210121, z: 6.3486687e-09}
+      rotation: {x: -2.05636024e-06, y: 2.98023437e-08, z: -2.98023011e-08, w: 1}
+      scale: {x: .99999994, y: .99999994, z: .99999994}
+      transformModified: 1
+    - name: LK L Clavicle
+      position: {x: -.276803285, y: .043642249, z: .15214707}
+      rotation: {x: -.707106769, y: -9.48304148e-07, z: .707106829, w: 9.48304091e-07}
+      scale: {x: 1.00000012, y: 1.00000024, z: 1.00000024}
+      transformModified: 1
+    - name: LK L UpperArm
+      position: {x: -.149230823, y: 1.52105635e-08, z: -5.30815214e-08}
+      rotation: {x: .00391137507, y: -.0323728248, z: -.0191340148, w: .999285042}
+      scale: {x: 1, y: .999999702, z: .99999994}
+      transformModified: 1
+    - name: LK L Forearm
+      position: {x: -.232625246, y: -2.44288003e-08, z: 2.21083695e-07}
+      rotation: {x: -.000607078895, y: .00920204632, z: .0525751375, w: .998574376}
+      scale: {x: 1, y: 1.00000036, z: 1.00000024}
+      transformModified: 1
+    - name: LK L Hand
+      position: {x: -.199388832, y: 8.57140581e-09, z: 1.39076079e-07}
+      rotation: {x: .715866864, y: -8.24804229e-05, z: .000899687933, w: -.698236227}
+      scale: {x: 1.00000012, y: .999999583, z: .999999702}
+      transformModified: 1
+    - name: LK Neck
+      position: {x: -.329203576, y: .000231236656, z: 6.34107544e-10}
+      rotation: {x: 4.08101073e-08, y: -4.79977643e-07, z: .178494632, w: -.983940899}
+      scale: {x: .99999994, y: .999999881, z: .99999994}
+      transformModified: 1
+    - name: LK Head
+      position: {x: -.0413915105, y: 8.17902261e-08, z: 1.17135424e-09}
+      rotation: {x: -1.14863639e-08, y: 4.85297164e-07, z: -.178494632, w: -.983940899}
+      scale: {x: 1.00000024, y: 1.00000024, z: 1.00000024}
+      transformModified: 1
+    - name: LK R Clavicle
+      position: {x: -.276803315, y: .0436431207, z: -.152146935}
+      rotation: {x: -.707106769, y: 9.48304091e-07, z: -.707106829, w: 9.48304091e-07}
+      scale: {x: 1.00000012, y: 1.00000024, z: 1.00000024}
+      transformModified: 1
+    - name: LK R UpperArm
+      position: {x: -.149230853, y: -3.09408277e-10, z: -1.2573247e-07}
+      rotation: {x: -.00391141465, y: .0323724709, z: -.0191338677, w: .999285042}
+      scale: {x: .99999994, y: .99999994, z: .99999994}
+      transformModified: 1
+    - name: LK R Forearm
+      position: {x: -.232625231, y: 5.66485525e-09, z: -6.9330838e-08}
+      rotation: {x: -.000607105147, y: .00920235738, z: -.0525747575, w: -.998574376}
+      scale: {x: 1.00000024, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: LK R Hand
+      position: {x: -.199388668, y: 5.50276757e-09, z: 2.62797784e-07}
+      rotation: {x: .715866923, y: -8.2469749e-05, z: -.000899697945, w: .698236227}
+      scale: {x: .999999583, y: .999999821, z: .999999821}
+      transformModified: 1
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

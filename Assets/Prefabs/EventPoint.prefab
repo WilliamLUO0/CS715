@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7955208503730995962}
   - component: {fileID: 6697781807399152471}
-  - component: {fileID: -7199517609719822718}
+  - component: {fileID: -4681249277348552082}
   m_Layer: 0
   m_Name: EventPoint
   m_TagString: Untagged
@@ -46,7 +46,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-7199517609719822718
+--- !u!114 &-4681249277348552082
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -58,6 +58,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82276b569b66e9a4ba8ec7e233e2728e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  b1: {fileID: 3683156687780159143, guid: b319b312e8590a642bb09b2b23fc94a5, type: 3}
+  b2: {fileID: 676094796316935307, guid: b04bfe843c8eff34ca2e2eda905a76bc, type: 3}
+  b3: {fileID: 1929249108243601066, guid: e22185e344ac3fb4689810fa5102349f, type: 3}
+  b4: {fileID: 4808211519209579208, guid: 72e85a8d4160b1946b06b2aad711c462, type: 3}
+  b5: {fileID: 8762895675936318621, guid: 7dd7f0606f4f825478e0a6644cf9257e, type: 3}
   Pet: {fileID: 2387668942210880340, guid: b1cb114da611d79449edf6896626cbf4, type: 3}
-  Ball: {fileID: 1604951357196645686, guid: db5ab625a9d753b4fa41d88d3760083b, type: 3}
-  Food: {fileID: 64033876754721977, guid: d0d4975fae455ba459e516b1a86225b6, type: 3}
