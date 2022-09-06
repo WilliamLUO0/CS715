@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7289915588358863616}
   - component: {fileID: -3956093224847156349}
   - component: {fileID: 3120518865484170033}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: 12_PolarBear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3615907526339230660}
   - component: {fileID: 3615907526350695126}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LittlePolarBear_mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -218,7 +218,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3615907526339230662}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -250,7 +250,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3615907526339230692}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LK L Foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -282,7 +282,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3615907526339230694}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LK L Toe0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -314,7 +314,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3615907526339230712}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LK L Toe0Nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -345,7 +345,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3615907526339230700}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LK R Thigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -377,7 +377,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3615907526339230680}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LK floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -408,7 +408,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3615907526339230686}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LK Pelvis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -442,7 +442,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3615907526339230672}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LK L Thigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -474,7 +474,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3615907526339230696}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LK L Calf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -506,7 +506,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3615907526339230684}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LK Spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -540,7 +540,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3615907526339230698}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LK L Clavicle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -572,7 +572,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3615907526339230674}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LK L UpperArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -604,7 +604,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3615907526339230676}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LK L Forearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -636,7 +636,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3615907526339230702}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LK R Calf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -668,7 +668,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3615907526339230706}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LK R Foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -700,7 +700,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3615907526339230708}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LK R Toe0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -732,7 +732,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3615907526339230710}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LK R Toe0Nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -763,7 +763,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3615907526339230718}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LK R Clavicle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -795,7 +795,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3615907526339230714}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LK R UpperArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -827,7 +827,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3615907526339230716}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LK R Forearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -859,7 +859,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3615907526339230704}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LK R Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -890,7 +890,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3615907526339230688}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LK L Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -921,7 +921,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3615907526339230678}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LK Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -953,7 +953,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3615907526339230682}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LK Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -985,7 +985,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3615907526339230690}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LK HeadNub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
