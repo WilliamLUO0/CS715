@@ -1412,8 +1412,8 @@ MonoBehaviour:
     altitude: 0
     timestampLastUpdate: 1510625503.978196
   worldOrigin:
-    latitude: 22.90417
-    longitude: 113.87557
+    latitude: 0
+    longitude: 0
     altitude: 0
     timestampLastUpdate: 0
   onOriginSet:
@@ -1427,10 +1427,10 @@ MonoBehaviour:
       m_Calls: []
   lastLocations: []
   currentMotionState: 0
-  useLocationServices: 0
+  useLocationServices: 1
   demoLocation: 14
   updateDistance: 0.1
-  simulateMotion: 2
+  simulateMotion: 1
   useWsadInEditor: 1
   motionMode: 1
   avatar: {fileID: 0}
