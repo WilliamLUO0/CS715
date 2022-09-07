@@ -39,7 +39,7 @@ public class GyroControl : MonoBehaviour
         }
 
         // Show debug messages
-        debugText.text = "[DEBUG]: gyroEnabled: " + gyroEnabled;
+        // debugText.text = "[DEBUG]: gyroEnabled: " + gyroEnabled;
     }
 
     private bool EnableGyro()
