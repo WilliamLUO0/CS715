@@ -50,7 +50,7 @@ public class GyroControl : MonoBehaviour
             gyro = Input.gyro;
             gyro.enabled = true;
 
-            cameraContainter.transform.rotation = Quaternion.Euler(90f, 90f, 0f);
+            cameraContainter.transform.rotation = Quaternion.Euler(90f, 180f, 0f);
             rot = new Quaternion(0, 0, 1, 0);
 
             return true;
