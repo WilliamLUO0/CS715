@@ -38,8 +38,8 @@ namespace GoShared {
         private float updateEvery = 1 / 1000f;
 
 		// Use this for initialization
-		void Start () {
-
+		void Start ()
+		{
 			if (Application.isEditor || !Application.isMobilePlatform) {
 				useLocationServices = false;
 			}
@@ -159,6 +159,11 @@ namespace GoShared {
 					LocationInfo info = Input.location.lastData;
 					if (info.latitude != currentLocation.latitude || info.longitude != currentLocation.longitude) {
 						currentLocation.updateLocation (Input.location.lastData);
+						
+						MovementSpeedCalculator.latitude = info.latitude;
+						MovementSpeedCalculator.longitude = info.longitude;
+						MovementSpeedCalculator.GPSReady = true;
+
 						if (onLocationChanged != null) {
 							onLocationChanged.Invoke (currentLocation);
 						}

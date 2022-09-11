@@ -31,14 +31,10 @@ public class StepCounterComponent : MonoBehaviour
         pedometer = null;
     }
 
-
-
-
-
-
     private void OnStep (int steps, double distance) {
         // Display the values // Distance in feet
-        debugText.text = "[DEBUG]: steps: " + steps.ToString() + ", distance: " + distance.ToString("F2") + " meters";
+        // debugText.text = "[DEBUG]: steps: " + steps.ToString() + ", distance: " + distance.ToString("F2") + " meters";
+        MovementSpeedCalculator.currentStepsValue = steps;
     }
 
 }
