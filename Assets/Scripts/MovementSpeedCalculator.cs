@@ -33,7 +33,7 @@ public class MovementSpeedCalculator : MonoBehaviour
     public IEnumerator calculateMovingSpeed()
     {
         bool firstTimeMarked = false;
-        double firstRecordedTime = 0;
+        double lastRecordedTime = 0;
         while(true)
         {
             yield return new WaitForSeconds(1);
@@ -48,12 +48,12 @@ public class MovementSpeedCalculator : MonoBehaviour
                     yield return new WaitForSeconds(1);
                 }
                 debugText.text = "Waiting First Speed Calculation...";
-                firstRecordedTime = Time.time;
+                lastRecordedTime = Time.time;
                 lastRecordedStepsValue = currentStepsValue;
             }
 
             double timeNow = Time.time;
-            int interval = (int)(timeNow - firstRecordedTime);
+            int interval = (int)(timeNow - lastRecordedTime);
 
             coordinateList.AddFirst(new Coordinates(latitude, longitude));
 
@@ -61,8 +61,10 @@ public class MovementSpeedCalculator : MonoBehaviour
             {
                 movingSpeedUsingGPS = calculateSpeedUsingGPS();
                 movingSpeedUsingSteps = calculateSpeedUsingSteps();
-                // debugText.text = "coordinate list length: " + coordinateList.Count;
+                exportMovingSpeedToCsv();
+                debugText.text = "Average moving speed (GPS): " + movingSpeedUsingGPS + "\nAverage moving speed (steps): " + movingSpeedUsingSteps + " steps/s";
                 coordinateList.Clear();
+                lastRecordedTime = Time.time;
             }
         }
     }
@@ -88,6 +90,7 @@ public class MovementSpeedCalculator : MonoBehaviour
             double longitude2 = nodeHead.Value.longitude;
 
             double distanceTravelled = calculateDistanceBetweenCoor(latitude1, longitude1, latitude2, longitude2);
+            distanceTravelled = Math.Sqrt(distanceTravelled);
             distanceTravelled *= 100000;  // convert kilometer to centimeter
 
             totalTravelDistance += distanceTravelled;
@@ -95,6 +98,7 @@ public class MovementSpeedCalculator : MonoBehaviour
             nodeHead = nodeHead.Next;
         }
         double avgTravelSpeed = (double)(totalTravelDistance / 10);
+        avgTravelSpeed = Math.Round(avgTravelSpeed, 3);
         // debugText.text = "average moving speed (GPS): " + avgTravelSpeed + " cm/s";
         return avgTravelSpeed;
     }
@@ -130,8 +134,13 @@ public class MovementSpeedCalculator : MonoBehaviour
     {
         int stepsDiff = currentStepsValue - lastRecordedStepsValue;
         double avgMovingSpeed = (double)((double)stepsDiff / 10D);
-        debugText.text = "average moving speed (steps): " + avgMovingSpeed + " steps/s";
+        // debugText.text = "average moving speed (steps): " + avgMovingSpeed + " steps/s";
         lastRecordedStepsValue = currentStepsValue;
         return avgMovingSpeed;
+    }
+
+    public void exportMovingSpeedToCsv()
+    {
+
     }
 }
