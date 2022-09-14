@@ -2,19 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ball_Find : MonoBehaviour
+public class B3_Find : MonoBehaviour
 {
-
-    // Use this for initialization
+    // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     //碰撞触发器检测函数 
@@ -22,7 +21,7 @@ public class Ball_Find : MonoBehaviour
     {
         if (other.tag == "Avatar") //如果进入的物体标签为“Avatar” 则
         {
-            UI_Mgr_02.Instance.AddBallNum();
+            UI_Mgr_02.Instance.AddB3Num();
             //调用UI管理其中的函数增加小球显示的数量
             Destroy(gameObject);
         }
