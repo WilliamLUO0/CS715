@@ -15,13 +15,32 @@ public class InsPoint : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine("InsPointFuc1");
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    IEnumerator InsPointFuc1()
+    {
+
+        while (true)
+        {
+            InsPointFuc();
+            InsPointFuc();
+            InsPointFuc();
+            InsPointFuc();
+            InsPointFuc();
+            InsPointFuc();
+            print("DoSomething Loop");
+
+            yield return new WaitForSeconds(3);
+
+        }
+
     }
 
     public void InsPointFuc()
