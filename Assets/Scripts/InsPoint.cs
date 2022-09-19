@@ -36,8 +36,12 @@ public class InsPoint : MonoBehaviour
     {
         while (true)
         {
-            if (x < 20)
+            if (x <= 16)
             {
+                InsPointFuc();
+                x++;
+                InsPointFuc();
+                x++;
                 InsPointFuc();
                 x++;
                 InsPointFuc();
