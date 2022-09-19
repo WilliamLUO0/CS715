@@ -3,19 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using TMPro;
-using System;
 using GoShared;
 
 public class MovementSpeedCalculator : MonoBehaviour
 {
     public TextMeshProUGUI debugText;
-    private double movingSpeedUsingGPS;
+    public LevelMechanism levelMechanism;
+
+    private double movingSpeedUsingGPS = 0;
     public static bool GPSReady = false;
-    private double movingSpeedUsingSteps;
+    private double movingSpeedUsingSteps = 0;
     public static float latitude = 0;
     public static float longitude = 0;
     public static int currentStepsValue = 0;
-    public int lastRecordedStepsValue = 0;
+    private int lastRecordedStepsValue = 0;
     private LinkedList<Coordinates> coordinateList = new LinkedList<Coordinates>();
 
     // Start is called before the first frame update
@@ -42,7 +43,7 @@ public class MovementSpeedCalculator : MonoBehaviour
             if (!firstTimeMarked)
             {
                 firstTimeMarked = true;
-                for (int i = 5; i > 0; i--)
+                for (int i = 10; i > 0; i--)
                 {
                     debugText.text = "Ajusting GPS Position... (" + i + ")";
                     yield return new WaitForSeconds(1);
@@ -61,8 +62,8 @@ public class MovementSpeedCalculator : MonoBehaviour
             {
                 movingSpeedUsingGPS = calculateSpeedUsingGPS();
                 movingSpeedUsingSteps = calculateSpeedUsingSteps();
-                exportMovingSpeedToCsv();
                 debugText.text = "Average moving speed (GPS): " + movingSpeedUsingGPS + "\nAverage moving speed (steps): " + movingSpeedUsingSteps + " steps/s";
+                levelMechanism.updateItemLevel(movingSpeedUsingGPS, movingSpeedUsingSteps);
                 coordinateList.Clear();
                 lastRecordedTime = Time.time;
             }
@@ -98,7 +99,8 @@ public class MovementSpeedCalculator : MonoBehaviour
             nodeHead = nodeHead.Next;
         }
         double avgTravelSpeed = (double)(totalTravelDistance / 10);
-        avgTravelSpeed = Math.Round(avgTravelSpeed, 3);
+        // avgTravelSpeed = Math.Round(avgTravelSpeed, 3);
+        if (avgTravelSpeed != 0) avgTravelSpeed = Math.Log10(avgTravelSpeed);
         // debugText.text = "average moving speed (GPS): " + avgTravelSpeed + " cm/s";
         return avgTravelSpeed;
     }
@@ -139,7 +141,7 @@ public class MovementSpeedCalculator : MonoBehaviour
         return avgMovingSpeed;
     }
 
-    public void exportMovingSpeedToCsv()
+    public void exportExerciseIntensityToCsv()
     {
 
     }
