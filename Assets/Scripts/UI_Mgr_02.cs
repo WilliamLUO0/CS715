@@ -14,6 +14,7 @@ public class UI_Mgr_02 : MonoBehaviour
     public Text Tx_B5Num;
     public GameObject Im_Catch;
 
+
     public static UI_Mgr_02 Instance;
     //申请静态公有脚本类变量
 
