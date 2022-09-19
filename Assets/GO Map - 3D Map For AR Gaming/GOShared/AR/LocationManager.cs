@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
 using System;
@@ -157,9 +157,17 @@ namespace GoShared {
 						SetOrigin (new Coordinates (Input.location.lastData));
 					}
 					LocationInfo info = Input.location.lastData;
-					if (info.latitude != currentLocation.latitude || info.longitude != currentLocation.longitude) {
+
+					double latDiff = Math.Abs(info.latitude - currentLocation.latitude);
+					double longDiff = Math.Abs(info.longitude - currentLocation.longitude);
+
+					// if (info.latitude != currentLocation.latitude || info.longitude != currentLocation.longitude) {
+					// 	
+					// }
+
+					if (latDiff >= 0.00001D || longDiff >= 0.00001D) {
 						currentLocation.updateLocation (Input.location.lastData);
-						
+
 						MovementSpeedCalculator.latitude = info.latitude;
 						MovementSpeedCalculator.longitude = info.longitude;
 						MovementSpeedCalculator.GPSReady = true;
