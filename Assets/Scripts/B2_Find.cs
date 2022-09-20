@@ -23,8 +23,9 @@ public class B2_Find : MonoBehaviour
         {
             UI_Mgr_02.Instance.AddB2Num();
             //调用UI管理其中的函数增加小球显示的数量
-            Destroy(gameObject);
             InsPoint.Instance.deletePoint();
+            Destroy(gameObject);
+            
         }
     }
 }

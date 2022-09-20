@@ -279,6 +279,7 @@ GameObject:
   - component: {fileID: 2930833414471175673}
   - component: {fileID: 5521916218834879594}
   - component: {fileID: -2387116397816663010}
+  - component: {fileID: -4314031336052137895}
   m_Layer: 9
   m_Name: 03_Bunny
   m_TagString: Untagged
@@ -362,6 +363,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf5e212e127c0b844b2eb98e55534560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-4314031336052137895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8706996806579749308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeac27c75ecbe204696b1879113f20d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &8706996806579749312

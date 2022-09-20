@@ -172,6 +172,7 @@ GameObject:
   - component: {fileID: -4937825746479666605}
   - component: {fileID: -9183076159819080743}
   - component: {fileID: -5877587413480721855}
+  - component: {fileID: -5820414193589979837}
   m_Layer: 9
   m_Name: 10_Penguin
   m_TagString: Untagged
@@ -256,6 +257,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf5e212e127c0b844b2eb98e55534560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-5820414193589979837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4122779894359063188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeac27c75ecbe204696b1879113f20d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &4122779894359063190

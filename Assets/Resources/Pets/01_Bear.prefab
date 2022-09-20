@@ -889,6 +889,7 @@ GameObject:
   - component: {fileID: 24639116612332458}
   - component: {fileID: 6681177658277838317}
   - component: {fileID: 8032083661347665175}
+  - component: {fileID: 2320668594983439661}
   m_Layer: 9
   m_Name: 01_Bear
   m_TagString: Untagged
@@ -973,6 +974,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf5e212e127c0b844b2eb98e55534560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2320668594983439661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621106960391520474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeac27c75ecbe204696b1879113f20d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1621106960391520476

@@ -523,6 +523,7 @@ GameObject:
   - component: {fileID: 2999464735073295436}
   - component: {fileID: 3377147913367422545}
   - component: {fileID: -8841573538025311191}
+  - component: {fileID: 5831489218334972264}
   m_Layer: 9
   m_Name: 15_Snowman
   m_TagString: Untagged
@@ -607,6 +608,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf5e212e127c0b844b2eb98e55534560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5831489218334972264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5485977544213251683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeac27c75ecbe204696b1879113f20d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &5485977544213251685

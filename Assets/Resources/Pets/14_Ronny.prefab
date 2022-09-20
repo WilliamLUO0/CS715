@@ -399,6 +399,7 @@ GameObject:
   - component: {fileID: 4200368072604376262}
   - component: {fileID: -2569845407348601961}
   - component: {fileID: -854241852316656895}
+  - component: {fileID: -6287648619968659938}
   m_Layer: 9
   m_Name: 14_Ronny
   m_TagString: Untagged
@@ -482,6 +483,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf5e212e127c0b844b2eb98e55534560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-6287648619968659938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6122840261015306776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeac27c75ecbe204696b1879113f20d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6122840261015306778

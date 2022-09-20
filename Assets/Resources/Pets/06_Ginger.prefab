@@ -280,6 +280,7 @@ GameObject:
   - component: {fileID: -2229687964080558508}
   - component: {fileID: 4520286609781519735}
   - component: {fileID: 7598267983461815974}
+  - component: {fileID: -48237527798650910}
   m_Layer: 9
   m_Name: 06_Ginger
   m_TagString: Untagged
@@ -363,6 +364,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf5e212e127c0b844b2eb98e55534560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-48237527798650910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2204130168448148015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeac27c75ecbe204696b1879113f20d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2204130168448148033

@@ -557,6 +557,7 @@ GameObject:
   - component: {fileID: 330902853203865639}
   - component: {fileID: -2055372536699000007}
   - component: {fileID: 2826955892340193623}
+  - component: {fileID: -7177707793044817642}
   m_Layer: 9
   m_Name: 04_Chic
   m_TagString: Untagged
@@ -640,6 +641,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf5e212e127c0b844b2eb98e55534560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-7177707793044817642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5214561907509236468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeac27c75ecbe204696b1879113f20d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &5214561907509236470
