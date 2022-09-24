@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class PointEvent : MonoBehaviour
 {
-    private GameObject[] Pets;
+    //private GameObject[] Pets;
     public GameObject[] B1s;
     public GameObject[] B2s;
     public GameObject[] B3s;
-    public GameObject[] B4s;
-    public GameObject[] B5s;
+    //public GameObject[] B4s;
+    //public GameObject[] B5s;
 
     void Awake()
     {
         B1s = Resources.LoadAll<GameObject>("B1s");
         B2s = Resources.LoadAll<GameObject>("B2s");
         B3s = Resources.LoadAll<GameObject>("B3s");
-        B4s = Resources.LoadAll<GameObject>("B4s");
-        B5s = Resources.LoadAll<GameObject>("B5s");
-        Pets = Resources.LoadAll<GameObject>("Pets");
+        //B4s = Resources.LoadAll<GameObject>("B4s");
+        //B5s = Resources.LoadAll<GameObject>("B5s");
+        //Pets = Resources.LoadAll<GameObject>("Pets");
     }
 
     // Start is called before the first frame update
@@ -47,32 +47,49 @@ public class PointEvent : MonoBehaviour
     //    }
     //}
 
+    //void Start()
+    //{
+    //    int _randomEvent = Random.Range(0, 6);
+    //    if (_randomEvent == 0)
+    //    {
+    //        InsPet();
+    //    }
+    //    else if (_randomEvent == 1)
+    //    {
+    //        InsB1s();
+    //    }
+    //    else if (_randomEvent == 2)
+    //    {
+    //        InsB2s();
+    //    }
+    //    else if (_randomEvent == 3)
+    //    {
+    //        InsB3s();
+    //    }
+    //    else if (_randomEvent == 4)
+    //    {
+    //        InsB4s();
+    //    }
+    //    else if (_randomEvent == 5)
+    //    {
+    //        InsB5s();
+    //    }
+    //}
+
     void Start()
     {
-        int _randomEvent = Random.Range(0, 6);
+        int _randomEvent = Random.Range(0, 3);
         if (_randomEvent == 0)
-        {
-            InsPet();
-        }
-        else if (_randomEvent == 1)
         {
             InsB1s();
         }
-        else if (_randomEvent == 2)
+        else if (_randomEvent == 1)
         {
             InsB2s();
         }
-        else if (_randomEvent == 3)
+        else if (_randomEvent == 2)
         {
             InsB3s();
-        }
-        else if (_randomEvent == 4)
-        {
-            InsB4s();
-        }
-        else if (_randomEvent == 5)
-        {
-            InsB5s();
         }
     }
 
@@ -81,14 +98,14 @@ public class PointEvent : MonoBehaviour
     {
         
     }
-    //生成小精灵
-    private void InsPet()
-    {
-        int _petIndex = Random.Range(0, Pets.Length);
-        //随机一个小精灵序号  序号从0到 所有小精灵预制体数量中随机选择
-        Instantiate(Pets[_petIndex], transform.position, transform.rotation);
-        //生成小精灵
-    }
+    ////生成小精灵
+    //private void InsPet()
+    //{
+    //    int _petIndex = Random.Range(0, Pets.Length);
+    //    //随机一个小精灵序号  序号从0到 所有小精灵预制体数量中随机选择
+    //    Instantiate(Pets[_petIndex], transform.position, transform.rotation);
+    //    //生成小精灵
+    //}
 
     private void InsB1s()
     {
@@ -155,43 +172,43 @@ public class PointEvent : MonoBehaviour
 
     }
 
-    private void InsB4s()
-    {
-        int _foodIndex = Random.Range(0, B4s.Length);
-        GameObject _food = Instantiate(B4s[_foodIndex], transform.position + new Vector3(0, 5f, 0), transform.rotation);
-        _food.AddComponent<BoxCollider>();
-        //增加碰撞器组件
-        _food.GetComponent<BoxCollider>().isTrigger = true;
-        //勾选isTrigger
-        _food.GetComponent<BoxCollider>().center = new Vector3(0, 0, 0);
-        //设置碰撞器的位置
-        _food.GetComponent<BoxCollider>().size = new Vector3(5.6f, 8.4f, 5.6f);
-        //设置碰撞器的大小
-        _food.AddComponent<Rigidbody>();
-        //增加刚体组件
-        _food.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-        //_food.AddComponent<MoveEffect>();
-        _food.AddComponent<B4_Find>();
+    //private void InsB4s()
+    //{
+    //    int _foodIndex = Random.Range(0, B4s.Length);
+    //    GameObject _food = Instantiate(B4s[_foodIndex], transform.position + new Vector3(0, 5f, 0), transform.rotation);
+    //    _food.AddComponent<BoxCollider>();
+    //    //增加碰撞器组件
+    //    _food.GetComponent<BoxCollider>().isTrigger = true;
+    //    //勾选isTrigger
+    //    _food.GetComponent<BoxCollider>().center = new Vector3(0, 0, 0);
+    //    //设置碰撞器的位置
+    //    _food.GetComponent<BoxCollider>().size = new Vector3(5.6f, 8.4f, 5.6f);
+    //    //设置碰撞器的大小
+    //    _food.AddComponent<Rigidbody>();
+    //    //增加刚体组件
+    //    _food.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+    //    //_food.AddComponent<MoveEffect>();
+    //    _food.AddComponent<B4_Find>();
 
-    }
+    //}
 
-    private void InsB5s()
-    {
-        int _foodIndex = Random.Range(0, B5s.Length);
-        GameObject _food = Instantiate(B5s[_foodIndex], transform.position + new Vector3(0, 5f, 0), transform.rotation);
-        _food.AddComponent<BoxCollider>();
-        //增加碰撞器组件
-        _food.GetComponent<BoxCollider>().isTrigger = true;
-        //勾选isTrigger
-        _food.GetComponent<BoxCollider>().center = new Vector3(0, 0, 0);
-        //设置碰撞器的位置
-        _food.GetComponent<BoxCollider>().size = new Vector3(5.6f, 8.4f, 5.6f);
-        //设置碰撞器的大小
-        _food.AddComponent<Rigidbody>();
-        //增加刚体组件
-        _food.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-        //_food.AddComponent<MoveEffect>();
-        _food.AddComponent<B5_Find>();
+    //private void InsB5s()
+    //{
+    //    int _foodIndex = Random.Range(0, B5s.Length);
+    //    GameObject _food = Instantiate(B5s[_foodIndex], transform.position + new Vector3(0, 5f, 0), transform.rotation);
+    //    _food.AddComponent<BoxCollider>();
+    //    //增加碰撞器组件
+    //    _food.GetComponent<BoxCollider>().isTrigger = true;
+    //    //勾选isTrigger
+    //    _food.GetComponent<BoxCollider>().center = new Vector3(0, 0, 0);
+    //    //设置碰撞器的位置
+    //    _food.GetComponent<BoxCollider>().size = new Vector3(5.6f, 8.4f, 5.6f);
+    //    //设置碰撞器的大小
+    //    _food.AddComponent<Rigidbody>();
+    //    //增加刚体组件
+    //    _food.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+    //    //_food.AddComponent<MoveEffect>();
+    //    _food.AddComponent<B5_Find>();
 
-    }
+    //}
 }
