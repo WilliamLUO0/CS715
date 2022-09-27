@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System;
 using TMPro;
 using GoShared;
@@ -48,7 +49,8 @@ public class MovementSpeedCalculator : MonoBehaviour
                     debugText.text = "Ajusting GPS Position... (" + i + ")";
                     yield return new WaitForSeconds(1);
                 }
-                debugText.text = "Waiting First Speed Calculation...";
+                // debugText.text = "Waiting First Speed Calculation...";
+                debugText.enabled = false;
                 lastRecordedTime = Time.time;
                 lastRecordedStepsValue = currentStepsValue;
             }

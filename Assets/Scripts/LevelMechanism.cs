@@ -6,11 +6,13 @@ using TMPro;
 public class LevelMechanism : MonoBehaviour
 {
     public TextMeshProUGUI magnetEnergyValueText;
-    public double changingRate = 2.0D;
+    public BarController barController;
+    public LevelImageController levelImageController;
+    public int changingRate = 5;
 
-    private double magnetEnergy = 0;
+    private int magnetEnergy = 0;
     private char itemLevel = 'C';
-    private double intensityIndex = 0;
+    private double exerciseIntensityValue = 0;
     private double averageSteps = 0;
 
 
@@ -28,12 +30,14 @@ public class LevelMechanism : MonoBehaviour
 
     public void lossAversionStrategyComputation()
     {
-        if ((0 < intensityIndex && intensityIndex <= 2.9000D) && (0 < averageSteps && averageSteps <= 1.4)) {
+        // return;   // debug only
+
+        if ((0 < exerciseIntensityValue && exerciseIntensityValue <= 2.9000D) && (0 < averageSteps && averageSteps <= 1.4)) {
             // low exercise intensity
 
             lowIntensityComputation();
 
-        } else if (2.9000D < intensityIndex && intensityIndex <= 3.3700D) {
+        } else if ((2.9000D < exerciseIntensityValue && exerciseIntensityValue <= 3.3700D) && (averageSteps != 0)) {
             // medium exercise intensity
 
             if (0 < averageSteps && averageSteps <= 1.4) {
@@ -42,7 +46,7 @@ public class LevelMechanism : MonoBehaviour
                 mediumIntensityComputation();
             }
 
-        } else if (intensityIndex > 3.3700D) {
+        } else if ((exerciseIntensityValue > 3.3700D) && (averageSteps != 0)) {
             // high exercise intensity
 
             if (0 < averageSteps && averageSteps <= 1.4) {
@@ -117,12 +121,12 @@ public class LevelMechanism : MonoBehaviour
 
     public void rewardStrategyComputation()
     {
-        if ((0 < intensityIndex && intensityIndex <= 2.9000D) && (0 < averageSteps && averageSteps <= 1.4)) {
+        if ((0 < exerciseIntensityValue && exerciseIntensityValue <= 2.9000D) && (0 < averageSteps && averageSteps <= 1.4)) {
             // low exercise intensity
 
             itemLevel = 'C';
 
-        } else if (2.9000D < intensityIndex && intensityIndex <= 3.3700D) {
+        } else if (2.9000D < exerciseIntensityValue && exerciseIntensityValue <= 3.3700D) {
             // medium exercise intensity
 
             if (0 < averageSteps && averageSteps <= 1.4) {
@@ -131,7 +135,7 @@ public class LevelMechanism : MonoBehaviour
                 itemLevel = 'B';
             }
 
-        } else if (intensityIndex > 3.3700D) {
+        } else if (exerciseIntensityValue > 3.3700D) {
             // high exercise intensity
 
             if (0 < averageSteps && averageSteps <= 1.4) {
@@ -148,12 +152,19 @@ public class LevelMechanism : MonoBehaviour
         }
     }
 
-    public void updateItemLevel(double intensityIndex, double averageSteps)
+    public void updateItemLevel(double exerciseIntensityValue, double averageSteps)
     {
-        this.intensityIndex = intensityIndex;
+        this.exerciseIntensityValue = exerciseIntensityValue;
         this.averageSteps = averageSteps;
 
-        lossAversionStrategyComputation();
-        // rewardStrategyComputation();
+        // loss aversion
+        // lossAversionStrategyComputation();
+        // barController.setEnergyBar((float)magnetEnergy);
+        // levelImageController.updateLevelImage(itemLevel);
+        
+        // reward
+        rewardStrategyComputation();
+        barController.setBarValue((float)exerciseIntensityValue);
+        levelImageController.updateLevelImage(itemLevel);
     }
 }
