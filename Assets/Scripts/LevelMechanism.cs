@@ -158,13 +158,19 @@ public class LevelMechanism : MonoBehaviour
         this.averageSteps = averageSteps;
 
         // loss aversion
-        // lossAversionStrategyComputation();
-        // barController.setEnergyBar((float)magnetEnergy);
-        // levelImageController.updateLevelImage(itemLevel);
+        lossAversionStrategyComputation();
+        barController.setBarValue((float)magnetEnergy);
         
         // reward
-        rewardStrategyComputation();
-        barController.setBarValue((float)exerciseIntensityValue);
+        // rewardStrategyComputation();
+        // barController.setBarValue((float)exerciseIntensityValue);
+
+
         levelImageController.updateLevelImage(itemLevel);
+    }
+
+    public char getCurrentItemLevel()
+    {
+        return itemLevel;
     }
 }
