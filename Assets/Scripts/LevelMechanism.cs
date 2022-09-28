@@ -15,6 +15,13 @@ public class LevelMechanism : MonoBehaviour
     private double exerciseIntensityValue = 0;
     private double averageSteps = 0;
 
+    public static LevelMechanism Instance;
+
+    void Awake()
+    {
+        Instance = this;
+    }
+
 
     // Start is called before the first frame update
     void Start()

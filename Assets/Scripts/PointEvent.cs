@@ -10,6 +10,7 @@ public class PointEvent : MonoBehaviour
     public GameObject[] B3s;
     //public GameObject[] B4s;
     //public GameObject[] B5s;
+    private char itemlevel;
 
     void Awake()
     {
@@ -78,18 +79,37 @@ public class PointEvent : MonoBehaviour
 
     void Start()
     {
-        int _randomEvent = Random.Range(0, 3);
-        if (_randomEvent == 0)
+        itemlevel = LevelMechanism.Instance.getCurrentItemLevel();
+        int _randomEvent = Random.Range(0, 10);
+        if ('C'.CompareTo(itemlevel) == 0)
         {
             InsB1s();
         }
-        else if (_randomEvent == 1)
+        if ('B'.CompareTo(itemlevel) == 0)
         {
-            InsB2s();
+            if (_randomEvent < 3)
+            {
+                InsB1s();
+            }
+            else
+            {
+                InsB2s();
+            }
         }
-        else if (_randomEvent == 2)
+        if ('A'.CompareTo(itemlevel) == 0)
         {
-            InsB3s();
+            if (_randomEvent < 2)
+            {
+                InsB1s();
+            }
+            else if (_randomEvent < 5)
+            {
+                InsB2s();
+            }
+            else
+            {
+                InsB3s();
+            }
         }
     }
 
