@@ -10,6 +10,7 @@ public class MovementSpeedCalculator : MonoBehaviour
 {
     public TextMeshProUGUI debugText;
     public LevelMechanism levelMechanism;
+    public DataOutput dataOutput;
 
     private double movingSpeedUsingGPS = 0;
     public static bool GPSReady = false;
@@ -64,8 +65,9 @@ public class MovementSpeedCalculator : MonoBehaviour
             {
                 movingSpeedUsingGPS = calculateSpeedUsingGPS();
                 movingSpeedUsingSteps = calculateSpeedUsingSteps();
-                debugText.text = "Average moving speed (GPS): " + movingSpeedUsingGPS + "\nAverage moving speed (steps): " + movingSpeedUsingSteps + " steps/s";
+                // debugText.text = "Average moving speed (GPS): " + movingSpeedUsingGPS + "\nAverage moving speed (steps): " + movingSpeedUsingSteps + " steps/s";
                 levelMechanism.updateItemLevel(movingSpeedUsingGPS, movingSpeedUsingSteps);
+                exportDataToCsv();
                 coordinateList.Clear();
                 lastRecordedTime = Time.time;
             }
@@ -101,8 +103,8 @@ public class MovementSpeedCalculator : MonoBehaviour
             nodeHead = nodeHead.Next;
         }
         double avgTravelSpeed = (double)(totalTravelDistance / 10);
-        // avgTravelSpeed = Math.Round(avgTravelSpeed, 3);
         if (avgTravelSpeed != 0) avgTravelSpeed = Math.Log10(avgTravelSpeed);
+        avgTravelSpeed = Math.Round(avgTravelSpeed, 4);
         // debugText.text = "average moving speed (GPS): " + avgTravelSpeed + " cm/s";
         return avgTravelSpeed;
     }
@@ -143,8 +145,8 @@ public class MovementSpeedCalculator : MonoBehaviour
         return avgMovingSpeed;
     }
 
-    public void exportExerciseIntensityToCsv()
+    public void exportDataToCsv()
     {
-
+        dataOutput.insertCsvRow(((int)Time.time - 11), movingSpeedUsingGPS, movingSpeedUsingSteps);
     }
 }

@@ -7,16 +7,16 @@ using UnityEngine.UI;
 public class UI_Mgr_02 : MonoBehaviour
 {
 
-    public Text Tx_B1Num;
-    public Text Tx_B2Num;
-    public Text Tx_B3Num;
+    public Text Tx_B1Num_Dragon;
+    public Text Tx_B2Num_DragonBaby;
+    public Text Tx_B3Num_Gem;
     public Text Tx_B4Num;
     public Text Tx_B5Num;
     public GameObject Im_Catch;
 
 
     public static UI_Mgr_02 Instance;
-    //ÉêÇë¾²Ì¬¹«ÓÐ½Å±¾Àà±äÁ¿
+    //ï¿½ï¿½ï¿½ë¾²Ì¬ï¿½ï¿½ï¿½Ð½Å±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
     void Awake()
     {
@@ -25,29 +25,29 @@ public class UI_Mgr_02 : MonoBehaviour
 
     public void AddB1Num()
     {
-        int _num = Int32.Parse(Tx_B1Num.text);
-        //½«´ÓText×é¼þÖÐ»ñÈ¡µÄ×Ö·û´®×ª»¯ÎªÊý×Ö´¢´æÔÚ¾Ö²¿±äÁ¿_numÖÐ
+        int _num = Int32.Parse(Tx_B1Num_Dragon.text);
+        //ï¿½ï¿½ï¿½ï¿½Textï¿½ï¿½ï¿½ï¿½Ð»ï¿½È¡ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½×ªï¿½ï¿½Îªï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½Ú¾Ö²ï¿½ï¿½ï¿½ï¿½ï¿½_numï¿½ï¿½
         _num++;
-        //ÔÚÔ­ÓÐµÄÊý×Ö»ù´¡ÉÏ¼Ó1
-        Tx_B1Num.text = _num.ToString();
-        //°ÑÔö¼ÓºóµÄÊý×Ö×ª»¯Îª×Ö·û´®ÏÔÊ¾ÔÚText×é¼þÉÏ
+        //ï¿½ï¿½Ô­ï¿½Ðµï¿½ï¿½ï¿½ï¿½Ö»ï¿½ï¿½ï¿½ï¿½Ï¼ï¿½1
+        Tx_B1Num_Dragon.text = _num.ToString();
+        //ï¿½ï¿½ï¿½ï¿½ï¿½Óºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½Îªï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½Textï¿½ï¿½ï¿½ï¿½ï¿½
     }
 
     public void AddB2Num()
     {
-        int _num = Int32.Parse(Tx_B2Num.text);
-        //½«´ÓText×é¼þÖÐ»ñÈ¡µÄ×Ö·û´®×ª»¯ÎªÊý×Ö´¢´æÔÚ¾Ö²¿±äÁ¿_numÖÐ
+        int _num = Int32.Parse(Tx_B2Num_DragonBaby.text);
+        //ï¿½ï¿½ï¿½ï¿½Textï¿½ï¿½ï¿½ï¿½Ð»ï¿½È¡ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½×ªï¿½ï¿½Îªï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½Ú¾Ö²ï¿½ï¿½ï¿½ï¿½ï¿½_numï¿½ï¿½
         _num++;
-        //ÔÚÔ­ÓÐµÄÊý×Ö»ù´¡ÉÏ¼Ó1
-        Tx_B2Num.text = _num.ToString();
-        //°ÑÔö¼ÓºóµÄÊý×Ö×ª»¯Îª×Ö·û´®ÏÔÊ¾ÔÚText×é¼þÉÏ
+        //ï¿½ï¿½Ô­ï¿½Ðµï¿½ï¿½ï¿½ï¿½Ö»ï¿½ï¿½ï¿½ï¿½Ï¼ï¿½1
+        Tx_B2Num_DragonBaby.text = _num.ToString();
+        //ï¿½ï¿½ï¿½ï¿½ï¿½Óºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½Îªï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½Textï¿½ï¿½ï¿½ï¿½ï¿½
     }
 
     public void AddB3Num()
     {
-        int _num = Int32.Parse(Tx_B3Num.text);
+        int _num = Int32.Parse(Tx_B3Num_Gem.text);
         _num++;
-        Tx_B3Num.text = _num.ToString();
+        Tx_B3Num_Gem.text = _num.ToString();
     }
 
     public void AddB4Num()

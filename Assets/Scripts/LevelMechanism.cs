@@ -8,7 +8,9 @@ public class LevelMechanism : MonoBehaviour
     public TextMeshProUGUI magnetEnergyValueText;
     public BarController barController;
     public LevelImageController levelImageController;
+    public ChangeColor changeColor;
     public int changingRate = 5;
+    public bool lossAversion;
 
     private int magnetEnergy = 0;
     private char itemLevel = 'C';
@@ -32,7 +34,7 @@ public class LevelMechanism : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        magnetEnergyValueText.text = "Magnet energy value: " + magnetEnergy + ". Item level: " + itemLevel;
+        // magnetEnergyValueText.text = "Magnet energy value: " + magnetEnergy + ". Item level: " + itemLevel;
     }
 
     public void lossAversionStrategyComputation()
@@ -66,16 +68,21 @@ public class LevelMechanism : MonoBehaviour
 
         } else {
             // when exercise intensity equals to zero
-            if (magnetEnergy > 0)
+            if (magnetEnergy == 80) {
+                magnetEnergy = 0;
+            } else if (magnetEnergy > 0) {
                 magnetEnergy = magnetEnergy - changingRate;
+            }
         }
 
-        setItemValue();
+        setItemLevel();
     }
 
     public void lowIntensityComputation()
     {
-        if (magnetEnergy == 50) {
+        if (magnetEnergy == 80) {
+            magnetEnergy = 0;
+        } else if (magnetEnergy == 50) {
             // no energy loss or gain due to player stay in the low exercise intensity range
         } else if (magnetEnergy > 50) {
             // reduce energy value due to low exercise intensity
@@ -89,9 +96,11 @@ public class LevelMechanism : MonoBehaviour
 
     public void mediumIntensityComputation()
     {
-        if (magnetEnergy == 74) {
+        if (magnetEnergy == 80) {
+            magnetEnergy = 0;
+        } else if (magnetEnergy == 75) {
             // no energy loss or gain due to player stay in the medium exercise intensity range
-        } else if (magnetEnergy > 74) {
+        } else if (magnetEnergy > 75) {
             // reduce energy value due to low exercise intensity
             // item level drop from A to B/C
             magnetEnergy = magnetEnergy - changingRate;
@@ -111,13 +120,13 @@ public class LevelMechanism : MonoBehaviour
         }
     }
 
-    public void setItemValue()
+    public void setItemLevel()
     {
         // set item level
         if (magnetEnergy <= 50)
         {
             itemLevel = 'C';
-        } else if (50 < magnetEnergy && magnetEnergy <= 74)
+        } else if (50 < magnetEnergy && magnetEnergy <= 75)
         {
             itemLevel = 'B';
         } else
@@ -164,16 +173,18 @@ public class LevelMechanism : MonoBehaviour
         this.exerciseIntensityValue = exerciseIntensityValue;
         this.averageSteps = averageSteps;
 
-        // loss aversion
-        lossAversionStrategyComputation();
-        barController.setBarValue((float)magnetEnergy);
-        
-        // reward
-        // rewardStrategyComputation();
-        // barController.setBarValue((float)exerciseIntensityValue);
-
+        if (lossAversion) {
+            // loss aversion
+            lossAversionStrategyComputation();
+            barController.setBarValue((float)magnetEnergy);
+        } else {
+            // reward
+            rewardStrategyComputation();
+            barController.setBarValue((float)exerciseIntensityValue);
+        }
 
         levelImageController.updateLevelImage(itemLevel);
+        changeColor.updateGlove(itemLevel);
     }
 
     public char getCurrentItemLevel()

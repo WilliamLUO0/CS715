@@ -34,14 +34,25 @@ public class ChangeColor : MonoBehaviour
        
     }
 
-     public void ChangeToClassB(){
+    public void ChangeToClassB(){
         
         read.sharedMaterial = material[1];
        
     }
-     public void ChangeToClassC(){
+    public void ChangeToClassC(){
         
         read.sharedMaterial = material[0];
        
+    }
+
+    public void updateGlove(char itemLevel)
+    {
+        if (itemLevel == 'C') {
+            ChangeToClassC();
+        } else if (itemLevel == 'B') {
+            ChangeToClassB();
+        } else {
+            ChangeToClassA();
+        }
     }
 }

@@ -10,6 +10,7 @@ public class BarController : MonoBehaviour
     public float maximum;
     public float current;
     public Image mask;
+    public bool lossAversion = false;
 
     // Start is called before the first frame update
     void Start()
@@ -25,12 +26,17 @@ public class BarController : MonoBehaviour
 
     public void getCurrentFill()
     {
-        float fillAmount = (float)current / (float)maximum;
+        float fillAmount;
+        if (lossAversion) {
+            fillAmount = (float)current / (float)maximum;
+        } else {
+            fillAmount = (((float)current * 7.0f) - 15.0f) / (float)maximum;
+        }
         mask.fillAmount = fillAmount;
     }
 
-    public void setBarValue(float energyValue)
+    public void setBarValue(float value)
     {
-        current = energyValue;
+        current = value;
     }
 }
