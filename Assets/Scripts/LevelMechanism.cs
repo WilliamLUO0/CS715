@@ -191,4 +191,9 @@ public class LevelMechanism : MonoBehaviour
     {
         return itemLevel;
     }
+
+    public int getMagnetEnergy()
+    {
+        return magnetEnergy;
+    }
 }

@@ -47,7 +47,7 @@ public class MovementSpeedCalculator : MonoBehaviour
                 firstTimeMarked = true;
                 for (int i = 10; i > 0; i--)
                 {
-                    debugText.text = "Ajusting GPS Position... (" + i + ")";
+                    debugText.text = "Adjusting GPS Position... (" + i + ")";
                     yield return new WaitForSeconds(1);
                 }
                 // debugText.text = "Waiting First Speed Calculation...";

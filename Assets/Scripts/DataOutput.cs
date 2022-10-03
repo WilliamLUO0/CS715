@@ -33,6 +33,7 @@ public class DataOutput : MonoBehaviour
         dt.Columns.Add("Time");
         dt.Columns.Add("Exercise Intensity Value (GPS)");
         dt.Columns.Add("Average Moving Steps");
+        dt.Columns.Add("Magnet Energy");
         dt.Columns.Add("Level of Reward");
         dt.Columns.Add("Number of Gems");
         dt.Columns.Add("Number of Dragon Babies");
@@ -85,6 +86,7 @@ public class DataOutput : MonoBehaviour
     public void insertCsvRow(double time, double exerciseIntensityValue, double averageMovingSteps)
     {
         char currentRewardLevel = levelMechanism.getCurrentItemLevel();
+        int magnetEnergy = levelMechanism.getMagnetEnergy();
         String numOfGemsString = numOfGems.text;
         String numOfDragonBabiesString = numOfDragonBabies.text;
         String numOfAdultDragonsString = numOfAdultDragons.text;
@@ -94,6 +96,7 @@ public class DataOutput : MonoBehaviour
         dr["Time"] = time.ToString();
         dr["Exercise Intensity Value (GPS)"] = exerciseIntensityValue.ToString();
         dr["Average Moving Steps"] = averageMovingSteps.ToString();
+        dr["Magnet Energy"] = magnetEnergy.ToString();
         dr["Level of Reward"] = currentRewardLevel.ToString();
         dr["Number of Gems"] = numOfGemsString;
         dr["Number of Dragon Babies"] = numOfDragonBabiesString;
