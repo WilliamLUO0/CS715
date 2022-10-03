@@ -21,6 +21,7 @@ public class DataOutput : MonoBehaviour
     public Text numOfGems;
     public Text numOfDragonBabies;
     public Text numOfAdultDragons;
+    public String emailAddress = "";
 
     private String filePath;
 
@@ -111,12 +112,16 @@ public class DataOutput : MonoBehaviour
     public void sendCsvFileToEmail()
     {
         debugText.enabled = true;
+        if (emailAddress == "") {
+            debugText.text = "Sending data file failed, no email address!";
+            return;
+        }
         debugText.text = "Sending data file to email...";
         MailMessage mail = new MailMessage();
         //发送邮箱的地址
         mail.From = new MailAddress("2894735011@qq.com");
         //收件人邮箱地址 如需发送多个人添加多个Add即可
-        mail.To.Add("2894735011@qq.com");
+        mail.To.Add(emailAddress);
         //标题
         mail.Subject = "AR Exergame Data";
         //正文

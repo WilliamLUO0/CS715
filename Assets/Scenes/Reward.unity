@@ -7276,6 +7276,7 @@ MonoBehaviour:
   numOfGems: {fileID: 605727424}
   numOfDragonBabies: {fileID: 55447641}
   numOfAdultDragons: {fileID: 206817494}
+  emailAddress: 2894735011@qq.com
 --- !u!4 &2105849296
 Transform:
   m_ObjectHideFlags: 0
