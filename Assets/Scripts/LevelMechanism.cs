@@ -16,6 +16,7 @@ public class LevelMechanism : MonoBehaviour
     private char itemLevel = 'C';
     private double exerciseIntensityValue = 0;
     private double averageSteps = 0;
+    private bool useExerciseIntensity = false;
 
     public static LevelMechanism Instance;
 
@@ -141,14 +142,17 @@ public class LevelMechanism : MonoBehaviour
             // low exercise intensity
 
             itemLevel = 'C';
+            useExerciseIntensity = true;
 
         } else if (2.9000D < exerciseIntensityValue && exerciseIntensityValue <= 3.3700D) {
             // medium exercise intensity
 
             if (0 < averageSteps && averageSteps <= 1.4) {
                 itemLevel = 'C';
+                useExerciseIntensity = false;
             } else {
                 itemLevel = 'B';
+                useExerciseIntensity = true;
             }
 
         } else if (exerciseIntensityValue > 3.3700D) {
@@ -156,15 +160,19 @@ public class LevelMechanism : MonoBehaviour
 
             if (0 < averageSteps && averageSteps <= 1.4) {
                 itemLevel = 'C';
+                useExerciseIntensity = false;
             } else if (1.4 < averageSteps && averageSteps <= 2.2) {
                 itemLevel = 'B';
+                useExerciseIntensity = false;
             } else {
                 itemLevel = 'A';
+                useExerciseIntensity = true;
             }
 
         } else {
             // when exercise intensity equals to zero
             itemLevel = 'C';
+            useExerciseIntensity = true;
         }
     }
 
@@ -180,7 +188,7 @@ public class LevelMechanism : MonoBehaviour
         } else {
             // reward
             rewardStrategyComputation();
-            barController.setBarValue((float)exerciseIntensityValue);
+            barController.setBarValue((float)exerciseIntensityValue, (float)averageSteps, useExerciseIntensity);
         }
 
         levelImageController.updateLevelImage(itemLevel);

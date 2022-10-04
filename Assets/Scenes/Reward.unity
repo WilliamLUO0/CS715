@@ -2245,7 +2245,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 757577cfcad49754681e65fb58e3f83a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maximum: 10.5
   current: 0
   mask: {fileID: 1487657584}
   lossAversion: 0
