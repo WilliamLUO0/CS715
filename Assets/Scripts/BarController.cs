@@ -9,9 +9,9 @@ public class BarController : MonoBehaviour
 {
     public Image mask;
     public bool lossAversion = false;
-    private float current;
+    private float current = 0.0f;
 
-    private float maximum;
+    private float maximum = 100.0f;
     private float coeff = 15.0f;
     private bool useExerciseIntensity;
 
@@ -54,5 +54,6 @@ public class BarController : MonoBehaviour
     public void setBarValue(float value)
     {
         current = value;
+        maximum = 100.0f;
     }
 }
