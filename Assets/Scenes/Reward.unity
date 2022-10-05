@@ -2245,7 +2245,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 757577cfcad49754681e65fb58e3f83a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  current: 0
   mask: {fileID: 1487657584}
   lossAversion: 0
 --- !u!114 &587260633
@@ -3028,9 +3027,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb58e157d0f36fc47b12027ded86f631, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Tx_B1Num_Dragon: {fileID: 0}
+  Tx_B1Num_Dragon: {fileID: 206817494}
   Tx_B2Num_DragonBaby: {fileID: 55447641}
-  Tx_B3Num_Gem: {fileID: 0}
+  Tx_B3Num_Gem: {fileID: 605727424}
   Tx_B4Num: {fileID: 1375440476}
   Tx_B5Num: {fileID: 1524078833}
   Im_Catch: {fileID: 1309729869}
