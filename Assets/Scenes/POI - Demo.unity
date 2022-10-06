@@ -157,6 +157,7 @@ MonoBehaviour:
   numOfGems: {fileID: 502364444}
   numOfDragonBabies: {fileID: 441276869}
   numOfAdultDragons: {fileID: 1878037895}
+  emailAddress: 
 --- !u!4 &19367516
 Transform:
   m_ObjectHideFlags: 0
@@ -2554,9 +2555,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb58e157d0f36fc47b12027ded86f631, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Tx_B1Num: {fileID: 502364444}
-  Tx_B2Num: {fileID: 441276869}
-  Tx_B3Num: {fileID: 1878037895}
+  Tx_B1Num_Dragon: {fileID: 0}
+  Tx_B2Num_DragonBaby: {fileID: 0}
+  Tx_B3Num_Gem: {fileID: 0}
   Tx_B4Num: {fileID: 1375440476}
   Tx_B5Num: {fileID: 1524078833}
   Im_Catch: {fileID: 1309729869}
@@ -2827,7 +2828,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11456902, guid: b58f1f87dc68947dfb9766f0cb9ec1fc, type: 3}
       propertyPath: _WikitudeLicenseKey
-      value: UaxM0P1sYNtEIMSrMk+Ix7CDEkHIgGVVVXNEIXrB1w64lmaGVLwia+CKQsdA4KY8KMT8t0UQmLEFVUxV6xFm5FfNSb0molyOhLzKxUrpsV5Qfv2T4I5Dk3hcjSzdHznEuLiFvfAY0mjZ7KOLqDTcB4/OIZI2p/UIgm3PG59RWuBTYWx0ZWRfXxnt0uKz0i53upEMR3Kx/emlvC04VO383SA22kusALUxeL3uL5KgFglSnVtvFBEclMqeiPVuaGKDNQA2+OwShwbcqeOgQZ2UyGXfQQywQ654eKrLbM0JSYG7wAyV17Uelxg0tlv/nV1QGPKs0Dac6IL0+KEy03Tmvbt26qZae9s7DgPkuyntNOGr5qzLK9AkHypieZUnz/UfYK3/HAjfHQV7n6hnc1CFzkjah6aY2EtiK6NcUiuIFdwPnyxEVvvQAWtEnr4I38tXCMgsy3VqCv8GQsqG5H1KgSXImJ8eT54vm+C740bJQSOzj7CXBPMaN9W27HMYYigdzKdsB57meFwr02narqI6JslDVAZFbHVUSBQJr7uB1GJ1Tms4P5XW0Ih8/ogw81sI3Wk8RyTLNn6WYTEPqiBNmTvl7qSQOUuO267DQAlmcAzLyXLbJsyyptu8cfRAdjCbkBbT4JbkJSY6lSEcXRvSrPzy65rSP7g6TAh1iqjC2wEnsUFH0fgdiUvUDFNmc/N/EEBOuXeMTAeoSGVjw1SXS7gXepf/wv/w9oYYjVg5YtwQellLLOypQYyxtJMB5EQCfey0uJV/v1qhAkCXXU9qtii2i097ou3MMufg3IxWFg3rFtQ0dun+np7aD/J3OKAN2cU1XXX2gpaGTRT3BtQGtwK6LJJ6eQDjpudOVVelNgs=
+      value: qgJjpWECrxPGPRGytB3jpAnR5o3BKjgZHHesFRgKzNzPGnnQudCiyRlCbwb+jQhOtt8pcGLhzksfFGKLJothjA3XIgPn/Iec8Esxx5Nkiuapp5/v6gjWgvQG679jVDVdXbnThPO6b/o88boVWyBGoaT3UP9AjctGsjjcIjYtBf9TYWx0ZWRfX6Av96sTk7cHBxVvMZVumtoCPHXpDllWvpHBPH5Tq+jr6tAyr4MJrsJi/SPTXYwb640TtFiEHNhaw+Aayd+TcIEcsUON+2AQTPqHS4QjSuHBCtZRjPgBACnDGMmzbJO65i6z9cD5IS7FbuKYGi1k6ssVlqjm4qiMGnhnARrDIKO+IN+XtJFUcuZJq4DQYzx3y9rkSHol6klgEGlxT+sqQa7T9DduFoZ2/b/4J82CrY8rPqwcIGHU+pe0VyLGjuRogIw5AYoWgkHZcp0LaxKW1duNQYAQfMw817Vo23GCJ3u6gI1JGGxPCV7WGIXdf62KMqfaKi5ly0ZVOccYdUlmXaowzLuqzQZj6YqIwKJaqzqoureXyfU7o9xQ3M25+oOXMiq5xzHq4axb0cMjdDWCC+ZZdGp/sfdBGdmIM6qSHF5ag/4iFOmXHq+D/6rSMMVOtP+kVpFfGc+sIeRd1XD4d5CEcfu1EDZUbf12wEDeefSeS7SddPdHsXfdwPWTirBSQBlq6KyEZ02rX2esp7D3Z8RVYWdCrm4pN590KlKoVXH9484/5GPDfYQToZ006deX+1hjFn516VXkxVZ8GcrEopUE6JgtyYFJvrBj60MW8B477zZX6LVlPfGyKGYkgMP2csZYrFhAV21sFu4KQaP3mDnt2l4AkYYXTFFJtvVJfGfGr8zYOgK0EQ8=
       objectReference: {fileID: 0}
     - target: {fileID: 995008301365665851, guid: b58f1f87dc68947dfb9766f0cb9ec1fc, type: 3}
       propertyPath: m_LocalPosition.x
