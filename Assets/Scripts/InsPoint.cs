@@ -31,7 +31,8 @@ public class InsPoint : MonoBehaviour
     {
 
     }
-
+    
+    // auto-generated function
     IEnumerator InsPointFuc1()
     {
         while (true)
@@ -53,7 +54,8 @@ public class InsPoint : MonoBehaviour
             Debug.Log("existing objects" + x);
         }
     }
-
+    
+    // generate objects
     public void InsPointFuc()
     {
         v3Ava = Ava.transform.position;
