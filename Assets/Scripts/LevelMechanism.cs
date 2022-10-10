@@ -147,7 +147,7 @@ public class LevelMechanism : MonoBehaviour
         } else if (2.9000D < exerciseIntensityValue && exerciseIntensityValue <= 3.3700D) {
             // medium exercise intensity
 
-            if (0 < averageSteps && averageSteps <= 1.4) {
+            if (0 <= averageSteps && averageSteps <= 1.4) {
                 itemLevel = 'C';
                 useExerciseIntensity = false;
             } else {
@@ -158,7 +158,7 @@ public class LevelMechanism : MonoBehaviour
         } else if (exerciseIntensityValue > 3.3700D) {
             // high exercise intensity
 
-            if (0 < averageSteps && averageSteps <= 1.4) {
+            if (0 <= averageSteps && averageSteps <= 1.4) {
                 itemLevel = 'C';
                 useExerciseIntensity = false;
             } else if (1.4 < averageSteps && averageSteps <= 2.2) {
@@ -172,7 +172,7 @@ public class LevelMechanism : MonoBehaviour
         } else {
             // when exercise intensity equals to zero
             itemLevel = 'C';
-            useExerciseIntensity = true;
+            useExerciseIntensity = false;
         }
     }
 
