@@ -39,11 +39,14 @@ public class MovementSpeedCalculator : MonoBehaviour
         double lastRecordedTime = 0;
         while(true)
         {
+            // loop every 1 second
             yield return new WaitForSeconds(1);
 
-            if (!GPSReady) continue;
+            if (!GPSReady) continue;  // waiting GPS
             if (!firstTimeMarked)
             {
+                // Waiting 10 seconds after GPS is ready
+                // Let GPS to self-adjust the position
                 firstTimeMarked = true;
                 for (int i = 10; i > 0; i--)
                 {
@@ -59,8 +62,10 @@ public class MovementSpeedCalculator : MonoBehaviour
             double timeNow = Time.time;
             int interval = (int)(timeNow - lastRecordedTime);
 
+            // record current coordinates
             coordinateList.AddFirst(new Coordinates(latitude, longitude));
 
+            // target every 10 seconds
             if (interval % 10 == 0 && interval != 0)
             {
                 movingSpeedUsingGPS = calculateSpeedUsingGPS();
@@ -84,6 +89,8 @@ public class MovementSpeedCalculator : MonoBehaviour
 
         double totalTravelDistance = 0;
         LinkedListNode<Coordinates> nodeHead = coordinateList.First;
+        // compute the distance between each coordinate
+        // formula: exercise intensity = log10(sum(square_root(travel distance)) * 100000 / 10)
         while(nodeHead != null)
         {
             double latitude1 = nodeHead.Value.latitude;

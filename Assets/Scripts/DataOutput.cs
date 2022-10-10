@@ -28,9 +28,9 @@ public class DataOutput : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //创建表 设置表名
+        // create data table
         dt = new DataTable("Sheet1");
-        //创建列 有三列
+        // create columns
         dt.Columns.Add("Time");
         dt.Columns.Add("Exercise Intensity Value (GPS)");
         dt.Columns.Add("Average Moving Steps");
@@ -40,24 +40,25 @@ public class DataOutput : MonoBehaviour
         dt.Columns.Add("Number of Dragon Babies");
         dt.Columns.Add("Number of Adult Dragons");
 
+        // Set output file name
         String currentDateTime = System.DateTime.UtcNow.ToLocalTime().ToString("yyyy_MM_dd_HH_mm_ss");
         filePath = Application.persistentDataPath + "/Exercise_Intensity_Data_" + currentDateTime + ".csv";
     }
 
     public void SaveCSV(string CSVPath, DataTable mSheet)
     {
-        //判断数据表内是否存在数据
+        // check whether data table has data
         if (mSheet.Rows.Count < 1)
             return;
 
-        //读取数据表行数和列数
+        // read data table
         int rowCount = mSheet.Rows.Count;
         int colCount = mSheet.Columns.Count;
 
-        //创建一个StringBuilder存储数据
+        // create StringBuilder
         StringBuilder stringBuilder = new StringBuilder();
 
-        //读取数据
+        // start to read data
         for (int i = 0; i < mSheet.Columns.Count; i++)
         {
             stringBuilder.Append(mSheet.Columns[i].ColumnName + ",");
@@ -67,14 +68,14 @@ public class DataOutput : MonoBehaviour
         {
             for (int j = 0; j < colCount; j++)
             {
-                //使用","分割每一个数值
+                // using ',' split each cell
                 stringBuilder.Append(mSheet.Rows[i][j] + ",");
             }
-            //使用换行符分割每一行
+            // using '\r\n' split each row
             stringBuilder.Append("\r\n");
         }
 
-        //写入文件
+        // write to the file
         using (FileStream fileStream = new FileStream(CSVPath, FileMode.Create, FileAccess.Write))
         {
             using (TextWriter textWriter = new StreamWriter(fileStream,Encoding.UTF8))
@@ -92,7 +93,7 @@ public class DataOutput : MonoBehaviour
         String numOfDragonBabiesString = numOfDragonBabies.text;
         String numOfAdultDragonsString = numOfAdultDragons.text;
 
-        //创建行 每一行有三列数据
+        // create rows
         DataRow dr = dt.NewRow();
         dr["Time"] = time.ToString();
         dr["Exercise Intensity Value (GPS)"] = exerciseIntensityValue.ToString();
@@ -106,7 +107,7 @@ public class DataOutput : MonoBehaviour
         dt.Rows.Add(dr);
         SaveCSV(filePath, dt);
 
-        // debugText.text = "File Saved: " + time.ToString();
+        // debugText.text = "File Saved: " + time.ToString();  // debug only
     }
 
     public void sendCsvFileToEmail()
@@ -118,22 +119,22 @@ public class DataOutput : MonoBehaviour
         }
         debugText.text = "Sending data file to email...";
         MailMessage mail = new MailMessage();
-        //发送邮箱的地址
+        // sender email address
         mail.From = new MailAddress("2894735011@qq.com");
-        //收件人邮箱地址 如需发送多个人添加多个Add即可
+        // reciver email address
         mail.To.Add(emailAddress);
-        //标题
+        // email title
         mail.Subject = "AR Exergame Data";
-        //正文
+        // email content
         mail.Body = "Contains Exercise intensity data";
-        //添加一个本地附件 
+        // add an attachment to the email
         mail.Attachments.Add(new Attachment(filePath));
  
-        //所使用邮箱的SMTP服务器
+        // SMTP server
         SmtpClient smtpServer = new SmtpClient("smtp.qq.com");
-        //SMTP端口
+        // SMTP Port number
         smtpServer.Port = 587;
-        //账号密码 一般邮箱会提供一串字符来代替密码  (IMAP:yglsvmuopmkddfhd POP3:rjkghklvufhbdhfg)
+        // email user account details
         smtpServer.Credentials = new System.Net.NetworkCredential("2894735011@qq.com", "yglsvmuopmkddfhd") as ICredentialsByHost;
         smtpServer.EnableSsl = true;
         ServicePointManager.ServerCertificateValidationCallback =

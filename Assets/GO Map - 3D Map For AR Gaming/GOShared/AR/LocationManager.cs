@@ -158,12 +158,9 @@ namespace GoShared {
 					}
 					LocationInfo info = Input.location.lastData;
 
+					// Avoiding character moving around due to GPS error
 					double latDiff = Math.Abs(info.latitude - currentLocation.latitude);
 					double longDiff = Math.Abs(info.longitude - currentLocation.longitude);
-
-					// if (info.latitude != currentLocation.latitude || info.longitude != currentLocation.longitude) {
-					// 	
-					// }
 
 					if (latDiff >= 0.00001D || longDiff >= 0.00001D) {
 						currentLocation.updateLocation (Input.location.lastData);
