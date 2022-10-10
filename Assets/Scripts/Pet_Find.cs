@@ -17,10 +17,10 @@ public class Pet_Find : MonoBehaviour
         
     }
 
-    //碰撞触发器检测函数 
+    // Collision trigger detection function
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Avatar") //如果进入的物体标签为“Avatar” 则
+        if (other.tag == "Avatar") // Object tagged "Avatar"
         {
             UI_Mgr_02.Instance.SetIm_Catch(true);
             Destroy(gameObject);

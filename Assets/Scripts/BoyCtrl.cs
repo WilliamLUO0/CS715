@@ -6,33 +6,33 @@ public class BoyCtrl : MonoBehaviour
 {
 
     private Animator ator;
-    //储存动画控制器
+    // save animation controller
 
     private MoveAvatar moveAvatar;
-    //储存角色的移动类 为了获取角色的移动状态
+    // The movement class that stores the character, in order to get the movement state of the character
 
 	// Use this for initialization
 	void Start ()
 	{
 	    ator = gameObject.GetComponent<Animator>();
-        //获取角色的动画控制器组件
+        // Get the animation controller component of the character
 
 	    moveAvatar = transform.parent.GetComponent<MoveAvatar>();
-        //获取父物体（角色控制器）上的角色移动类
+        // Get the character movement class on the parent object (character controller)
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	    if (moveAvatar.animationState==MoveAvatar.AvatarAnimationState.Idle)
-            //如果角色控制器中的角色动画状态 是定义的待机状态 则
+            // If the character animation state in the character controller is the defined standby state then
 	    {
 	        if (!ator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
-                //如果动画控制器当前播放的不是待机动画则
+                // If the animation controller is not currently playing a standby animation then
 	        {
 	            ator.SetTrigger("Idle");
             }
 	        
-            //触发动画控制器中的待机动画
+            // Trigger standby animation in animation controller
 	    }else if (moveAvatar.animationState == MoveAvatar.AvatarAnimationState.Walk)
 	    {
 	        if (!ator.GetCurrentAnimatorStateInfo(0).IsName("Walk"))

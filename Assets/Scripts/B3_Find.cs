@@ -16,13 +16,13 @@ public class B3_Find : MonoBehaviour
         
     }
 
-    //碰撞触发器检测函数 
+    // Collision trigger detection function
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Avatar") //如果进入的物体标签为“Avatar” 则
+        if (other.tag == "Avatar") // Object tagged "Avatar"
         {
             UI_Mgr_02.Instance.AddB3Num();
-            //调用UI管理其中的函数增加小球显示的数量
+            // Call the function in the UI management to increase the number of displays
             InsPoint.Instance.deletePoint();
             Destroy(gameObject);
             

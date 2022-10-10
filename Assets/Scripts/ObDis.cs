@@ -15,6 +15,7 @@ public class ObDis : MonoBehaviour
     void Update()
     {
         t2 = Time.fixedTime;
+        // disappears automatically
         if (t2 - t1 >= 120)
         {
             

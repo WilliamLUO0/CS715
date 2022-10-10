@@ -131,114 +131,83 @@ public class PointEvent : MonoBehaviour
     {
         
     }
-    ////����С����
-    //private void InsPet()
-    //{
-    //    int _petIndex = Random.Range(0, Pets.Length);
-    //    //���һ��С�������  ��Ŵ�0�� ����С����Ԥ�������������ѡ��
-    //    Instantiate(Pets[_petIndex], transform.position, transform.rotation);
-    //    //����С����
-    //}
-
+    
+    // B1 generating function
     private void InsB1s()
     {
         int _ballIndex = Random.Range(0, B1s.Length);
         GameObject _food = Instantiate(B1s[_ballIndex], transform.position + new Vector3(0, 5f, 0), transform.rotation);
-        //������������������ȡ��Ӧ��Ԥ�����������
         //_ball.transform.localEulerAngles = new Vector3(-30f, 0, 0);
-        //���ýǶ�
         _food.AddComponent<BoxCollider>();
-        //������ײ�����
         _food.GetComponent<BoxCollider>().isTrigger = true;
-        //��ѡisTrigger
         _food.GetComponent<BoxCollider>().center = new Vector3(0, 0, 0);
-        //������ײ����λ��
         _food.GetComponent<BoxCollider>().size = new Vector3(5.6f, 8.4f, 5.6f);
-        //������ײ���Ĵ�С
         _food.AddComponent<Rigidbody>();
-        //���Ӹ������
         _food.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-        //��������ϵ����������任Ч��
         //_ball.AddComponent<MoveEffect>();
         _food.AddComponent<B1_Find>();
 
 
     }
 
+    // B2 generating function
     private void InsB2s()
     {
         int _foodIndex = Random.Range(0, B2s.Length);
         GameObject _food = Instantiate(B2s[_foodIndex], transform.position + new Vector3(0, 5f, 0), transform.rotation);
         _food.AddComponent<BoxCollider>();
-        //������ײ�����
         _food.GetComponent<BoxCollider>().isTrigger = true;
-        //��ѡisTrigger
         _food.GetComponent<BoxCollider>().center = new Vector3(0, 0, 0);
-        //������ײ����λ��
         _food.GetComponent<BoxCollider>().size = new Vector3(5.6f, 8.4f, 5.6f);
-        //������ײ���Ĵ�С
         _food.AddComponent<Rigidbody>();
-        //���Ӹ������
         _food.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
         //_food.AddComponent<MoveEffect>();
         _food.AddComponent<B2_Find>();
 
     }
 
+    // B3 generating function
     private void InsB3s()
     {
         int _foodIndex = Random.Range(0, B3s.Length);
         GameObject _food = Instantiate(B3s[_foodIndex], transform.position + new Vector3(0, 5f, 0), transform.rotation);
         _food.AddComponent<BoxCollider>();
-        //������ײ�����
         _food.GetComponent<BoxCollider>().isTrigger = true;
-        //��ѡisTrigger
         _food.GetComponent<BoxCollider>().center = new Vector3(0, 0, 0);
-        //������ײ����λ��
         _food.GetComponent<BoxCollider>().size = new Vector3(5.6f, 8.4f, 5.6f);
-        //������ײ���Ĵ�С
         _food.AddComponent<Rigidbody>();
-        //���Ӹ������
         _food.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
         //_food.AddComponent<MoveEffect>();
         _food.AddComponent<B3_Find>();
 
     }
 
+    // B4 generating function
     //private void InsB4s()
     //{
     //    int _foodIndex = Random.Range(0, B4s.Length);
     //    GameObject _food = Instantiate(B4s[_foodIndex], transform.position + new Vector3(0, 5f, 0), transform.rotation);
     //    _food.AddComponent<BoxCollider>();
-    //    //������ײ�����
     //    _food.GetComponent<BoxCollider>().isTrigger = true;
-    //    //��ѡisTrigger
     //    _food.GetComponent<BoxCollider>().center = new Vector3(0, 0, 0);
-    //    //������ײ����λ��
     //    _food.GetComponent<BoxCollider>().size = new Vector3(5.6f, 8.4f, 5.6f);
-    //    //������ײ���Ĵ�С
     //    _food.AddComponent<Rigidbody>();
-    //    //���Ӹ������
     //    _food.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
     //    //_food.AddComponent<MoveEffect>();
     //    _food.AddComponent<B4_Find>();
 
     //}
 
+    // B5 generating function
     //private void InsB5s()
     //{
     //    int _foodIndex = Random.Range(0, B5s.Length);
     //    GameObject _food = Instantiate(B5s[_foodIndex], transform.position + new Vector3(0, 5f, 0), transform.rotation);
     //    _food.AddComponent<BoxCollider>();
-    //    //������ײ�����
     //    _food.GetComponent<BoxCollider>().isTrigger = true;
-    //    //��ѡisTrigger
     //    _food.GetComponent<BoxCollider>().center = new Vector3(0, 0, 0);
-    //    //������ײ����λ��
     //    _food.GetComponent<BoxCollider>().size = new Vector3(5.6f, 8.4f, 5.6f);
-    //    //������ײ���Ĵ�С
     //    _food.AddComponent<Rigidbody>();
-    //    //���Ӹ������
     //    _food.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
     //    //_food.AddComponent<MoveEffect>();
     //    _food.AddComponent<B5_Find>();

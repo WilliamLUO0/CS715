@@ -6,35 +6,34 @@ public class MoveEffect : MonoBehaviour
 {
 
 	private float radian = 0;
-	//起始的弧度
+	// starting radian
 
 	private float perRad = 0.03f;
-	//弧度的变化值
+	// Variation in radians
 	private float add = 0f;
-	//储存位移的偏移量
+	// Store the offset of the displacement
 	private Vector3 posOri;
-	//储存物体生成时的其实坐标
-
+	// Store the actual coordinates of the object when it was generated
 
 	// Use this for initialization
 	void Start()
 	{
 		posOri = transform.position;
-		//把物体刚生成时候的坐标记录下来
+		// Record the coordinates of the object when it was just generated
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
 		radian += perRad;
-		//弧度不断的增加
+		// The arc keeps increasing
 		add = Mathf.Sin(radian);
-		//得出偏移值
+		// get the offset value
 		transform.position = posOri + new Vector3(0, add, 0);
-		//让物体浮动起来
+		// float the object
 
 
 		transform.Rotate(0, Time.deltaTime * 25f, 0, Space.World);
-		//以世界坐标为旋转依据 在Y轴上进行旋转
+		// Rotate on the Y axis based on world coordinates
 	}
 }
