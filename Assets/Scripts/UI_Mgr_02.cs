@@ -7,9 +7,9 @@ using UnityEngine.UI;
 public class UI_Mgr_02 : MonoBehaviour
 {
 
-    public Text Tx_B1Num_Dragon;
+    public Text Tx_B1Num_Gem;
     public Text Tx_B2Num_DragonBaby;
-    public Text Tx_B3Num_Gem;
+    public Text Tx_B3Num_Dragon;
     public Text Tx_B4Num;
     public Text Tx_B5Num;
     public GameObject Im_Catch;
@@ -25,9 +25,9 @@ public class UI_Mgr_02 : MonoBehaviour
     // Increase the number of B1s on the panel
     public void AddB1Num()
     {
-        int _num = Int32.Parse(Tx_B1Num_Dragon.text);
+        int _num = Int32.Parse(Tx_B1Num_Gem.text);
         _num++;
-        Tx_B1Num_Dragon.text = _num.ToString();
+        Tx_B1Num_Gem.text = _num.ToString();
     }
 
     // Increase the number of B2s on the panel
@@ -41,9 +41,9 @@ public class UI_Mgr_02 : MonoBehaviour
     // Increase the number of B3s on the panel
     public void AddB3Num()
     {
-        int _num = Int32.Parse(Tx_B3Num_Gem.text);
+        int _num = Int32.Parse(Tx_B3Num_Dragon.text);
         _num++;
-        Tx_B3Num_Gem.text = _num.ToString();
+        Tx_B3Num_Dragon.text = _num.ToString();
     }
 
     // Increase the number of B4s on the panel

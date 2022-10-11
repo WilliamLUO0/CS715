@@ -3098,9 +3098,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb58e157d0f36fc47b12027ded86f631, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Tx_B1Num_Dragon: {fileID: 572906670}
+  Tx_B1Num_Gem: {fileID: 572906670}
   Tx_B2Num_DragonBaby: {fileID: 855905307}
-  Tx_B3Num_Gem: {fileID: 1488850199}
+  Tx_B3Num_Dragon: {fileID: 1488850199}
   Tx_B4Num: {fileID: 1375440476}
   Tx_B5Num: {fileID: 1524078833}
   Im_Catch: {fileID: 1309729869}
