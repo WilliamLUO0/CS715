@@ -6,6 +6,7 @@ using TMPro;
 public class LevelMechanism : MonoBehaviour
 {
     public TextMeshProUGUI magnetEnergyValueText;
+    public TextMeshProUGUI GPSFailSafeText;
     public BarController barController;
     public LevelImageController levelImageController;
     public ChangeColor changeColor;
@@ -17,6 +18,7 @@ public class LevelMechanism : MonoBehaviour
     private double exerciseIntensityValue = 0;
     private double averageSteps = 0;
     private bool useExerciseIntensity = false;
+    private bool enableGPSFailSafe = false;
 
     public static LevelMechanism Instance;
 
@@ -138,6 +140,18 @@ public class LevelMechanism : MonoBehaviour
 
     public void rewardStrategyComputation()
     {
+        if (averageSteps == 0) {
+            itemLevel = 'C';
+            useExerciseIntensity = false;
+            return;
+        }
+
+        if (exerciseIntensityValue == 0) {
+            itemLevel = 'C';
+            useExerciseIntensity = true;
+            return;
+        }
+
         if ((0 < exerciseIntensityValue && exerciseIntensityValue <= 2.9000D) && (0 < averageSteps && averageSteps <= 1.4)) {
             // low exercise intensity
 
@@ -172,7 +186,39 @@ public class LevelMechanism : MonoBehaviour
         } else {
             // when exercise intensity equals to zero
             itemLevel = 'C';
-            useExerciseIntensity = false;
+            useExerciseIntensity = true;
+        }
+    }
+
+    public void lossAversionStrategyComputationFailSafe()
+    {
+        useExerciseIntensity = false;
+        if (averageSteps == 0) {
+            if (magnetEnergy == 80) {
+                magnetEnergy = 0;
+            } else if (magnetEnergy > 0) {
+                magnetEnergy = magnetEnergy - changingRate;
+            }
+        } else if (0 < averageSteps && averageSteps <= 1.4) {
+            lowIntensityComputation();
+        } else if (1.4 < averageSteps && averageSteps <= 2.2) {
+            mediumIntensityComputation();
+        } else {
+            highIntensityComputation();
+        }
+
+        setItemLevel();
+    }
+
+    public void rewardStrategyComputationFailSafe()
+    {
+        useExerciseIntensity = false;
+        if (0 <= averageSteps && averageSteps <= 1.4) {
+            itemLevel = 'C';
+        } else if (1.4 < averageSteps && averageSteps <= 2.2) {
+            itemLevel = 'B';
+        } else {
+            itemLevel = 'A';
         }
     }
 
@@ -183,11 +229,15 @@ public class LevelMechanism : MonoBehaviour
 
         if (lossAversion) {
             // loss aversion
-            lossAversionStrategyComputation();
+            if (!enableGPSFailSafe) lossAversionStrategyComputation();
+            else lossAversionStrategyComputationFailSafe();
+
             barController.setBarValue((float)magnetEnergy);
         } else {
             // reward
-            rewardStrategyComputation();
+            if (!enableGPSFailSafe) rewardStrategyComputation();
+            else rewardStrategyComputationFailSafe();
+
             barController.setBarValue((float)exerciseIntensityValue, (float)averageSteps, useExerciseIntensity);
         }
 
@@ -203,5 +253,19 @@ public class LevelMechanism : MonoBehaviour
     public int getMagnetEnergy()
     {
         return magnetEnergy;
+    }
+
+    public void triggerGPSFailSafe()
+    {
+        if (enableGPSFailSafe)
+        {
+            enableGPSFailSafe = false;
+            GPSFailSafeText.text = "FS-Disabled";
+        }
+        else
+        {
+            enableGPSFailSafe = true;
+            GPSFailSafeText.text = "FS-Enabled";
+        }
     }
 }
