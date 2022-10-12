@@ -7,7 +7,7 @@ public class InsPoint : MonoBehaviour
     public GameObject Ava;
     public GameObject PrePoint;
     public float MinDis = 3f;
-    public float MaxDis = 50f;
+    public float MaxDis = 30f;
     public static int x = 0;
 
     private Vector3 v3Ava;
