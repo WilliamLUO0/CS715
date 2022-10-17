@@ -1,0 +1,118 @@
+fileFormatVersion: 2
+guid: ec3285171ba9305409e9d9c7c6786e93
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: LittleOwlHI_mesh
+    100004: LK
+    100006: LK Head
+    100008: LK HeadNub
+    100010: LK L Calf
+    100012: LK L Clavicle
+    100014: LK L Foot
+    100016: LK L Forearm
+    100018: LK L Hand
+    100020: LK L Thigh
+    100022: LK L Toe0
+    100024: LK L Toe0Nub
+    100026: LK L UpperArm
+    100028: LK Neck
+    100030: LK Pelvis
+    100032: LK R Calf
+    100034: LK R Clavicle
+    100036: LK R Foot
+    100038: LK R Forearm
+    100040: LK R Hand
+    100042: LK R Thigh
+    100044: LK R Toe0
+    100046: LK R Toe0Nub
+    100048: LK R UpperArm
+    100050: LK Spine
+    400000: //RootNode
+    400002: LittleOwlHI_mesh
+    400004: LK
+    400006: LK Head
+    400008: LK HeadNub
+    400010: LK L Calf
+    400012: LK L Clavicle
+    400014: LK L Foot
+    400016: LK L Forearm
+    400018: LK L Hand
+    400020: LK L Thigh
+    400022: LK L Toe0
+    400024: LK L Toe0Nub
+    400026: LK L UpperArm
+    400028: LK Neck
+    400030: LK Pelvis
+    400032: LK R Calf
+    400034: LK R Clavicle
+    400036: LK R Foot
+    400038: LK R Forearm
+    400040: LK R Hand
+    400042: LK R Thigh
+    400044: LK R Toe0
+    400046: LK R Toe0Nub
+    400048: LK R UpperArm
+    400050: LK Spine
+    4300000: LittleOwlHI_mesh
+    9500000: //RootNode
+    13700000: LittleOwlHI_mesh
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,41 @@
+fileFormatVersion: 2
+guid: 74f59eb22abf947599d3aecf24b954b2
+timeCreated: 1481805823
+licenseType: Free
+PluginImporter:
+  serializedVersion: 1
+  iconMap:
+    Wikitude.BackgroundCamera: {fileID: 2800000, guid: 74a0a0a6d2db6476bb261298b6257ee6,
+      type: 3}
+    Wikitude.ImageTrackable: {fileID: 2800000, guid: 74a0a0a6d2db6476bb261298b6257ee6,
+      type: 3}
+    Wikitude.ImageTracker: {fileID: 2800000, guid: 74a0a0a6d2db6476bb261298b6257ee6,
+      type: 3}
+    Wikitude.InstantTrackable: {fileID: 2800000, guid: 74a0a0a6d2db6476bb261298b6257ee6,
+      type: 3}
+    Wikitude.InstantTracker: {fileID: 2800000, guid: 74a0a0a6d2db6476bb261298b6257ee6,
+      type: 3}
+    Wikitude.ObjectTrackable: {fileID: 2800000, guid: 74a0a0a6d2db6476bb261298b6257ee6,
+      type: 3}
+    Wikitude.ObjectTracker: {fileID: 2800000, guid: 74a0a0a6d2db6476bb261298b6257ee6,
+      type: 3}
+    Wikitude.Plugin: {fileID: 2800000, guid: 74a0a0a6d2db6476bb261298b6257ee6, type: 3}
+    Wikitude.WikitudeCamera: {fileID: 2800000, guid: 74a0a0a6d2db6476bb261298b6257ee6,
+      type: 3}
+  executionOrder: {}
+  isPreloaded: 0
+  platformData:
+    Any:
+      enabled: 1
+      settings: {}
+    Editor:
+      enabled: 0
+      settings:
+        DefaultValueInitialized: true
+    WindowsStoreApps:
+      enabled: 0
+      settings:
+        CPU: AnyCPU
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
