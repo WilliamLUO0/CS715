@@ -37,13 +37,11 @@ public class LevelMechanism : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // magnetEnergyValueText.text = "Magnet energy value: " + magnetEnergy + ". Item level: " + itemLevel;
+        
     }
 
     public void lossAversionStrategyComputation()
     {
-        // return;   // debug only
-
         if ((0 < exerciseIntensityValue && exerciseIntensityValue <= 2.9000D) && (0 < averageSteps && averageSteps <= 1.4)) {
             // low exercise intensity
 
@@ -84,6 +82,7 @@ public class LevelMechanism : MonoBehaviour
     public void lowIntensityComputation()
     {
         if (magnetEnergy == 80) {
+            // when magnet energy equals to 80, but the exercise intensity is low, then set magnetEnergy back to zero
             magnetEnergy = 0;
         } else if (magnetEnergy == 50) {
             // no energy loss or gain due to player stay in the low exercise intensity range
@@ -100,6 +99,7 @@ public class LevelMechanism : MonoBehaviour
     public void mediumIntensityComputation()
     {
         if (magnetEnergy == 80) {
+            // when magnet energy equals to 80, but the exercise intensity is medium, then set magnetEnergy back to zero
             magnetEnergy = 0;
         } else if (magnetEnergy == 75) {
             // no energy loss or gain due to player stay in the medium exercise intensity range
@@ -190,6 +190,15 @@ public class LevelMechanism : MonoBehaviour
         }
     }
 
+    /**
+     * This method is used when GPS fail safe function is trigger
+     * To trigger this function, click the 'FS-Disabled' text on the top left of the screen
+     * 
+     * The motivation for designing GPS fail safe function is because, when the GPS accuracy is very very bad,
+     * then we can discard the GPS data and only the step counter read to do the experiment.
+     * 
+     * Luckily, during our user study experiment, we never used this function.
+    */
     public void lossAversionStrategyComputationFailSafe()
     {
         useExerciseIntensity = false;
@@ -210,6 +219,15 @@ public class LevelMechanism : MonoBehaviour
         setItemLevel();
     }
 
+    /**
+     * This method is used when GPS fail safe function is trigger
+     * To trigger this function, click the 'FS-Disabled' text on the top left of the screen
+     * 
+     * The motivation for designing GPS fail safe function is because, when the GPS accuracy is very very bad,
+     * then we can discard the GPS data and only the step counter read to do the experiment.
+     * 
+     * Luckily, during our user study experiment, we never used this function.
+    */
     public void rewardStrategyComputationFailSafe()
     {
         useExerciseIntensity = false;
