@@ -21,11 +21,11 @@
 10. Repeat same processes for anthor version.
 
 ## Hardware Requirements
-* This project will only run on Android devices that has Android Operating System version  below 10 (or below Android API level 29). The Android device that we were used to do the user study is `Vivo x9` smartphone with Android OS 7.1.2.\
+* This project will only run on Android devices that has Android Operating System version  below 10 (or below Android API level 29). The Android device that we were used to do the user study is `Vivo x9` smartphone with Android OS 7.1.2.
 * Any Android device that wants to install and run this project must support GPS and accelerometer. The proper internet connection is also required, this is because, in order to use the GPS function, the smartphone must connect to the internet.
 
 ## Data Recording and Data Location
-* The program will automatically record the following data: `Time, Exercise Intensity Value (GPS), Average Moving Steps, Magnet Energy, Level of Reward, Number of Gems, Number of Dragon Babies, Number of Adult Dragons`.\
+* The program will automatically record the following data: `Time, Exercise Intensity Value (GPS), Average Moving Steps, Magnet Energy, Level of Reward, Number of Gems, Number of Dragon Babies, Number of Adult Dragons`.
 * `Exercise Intensity Value (GPS)` represents the value that is measured and calculated by using the GPS data. `Average Moving Steps` represents the value that is measured and calculated by using the step counter.
 * The data recording will start when the GPS position adjustment process finished.
 * The program will automatically write the data to a csv data file, you can find the csv data file in the `files` folder under the program main directory. The name of the csv file starts with the words: `Exercise_Intensity_Data`.
