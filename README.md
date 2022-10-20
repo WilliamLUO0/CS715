@@ -3,7 +3,7 @@
 ## How to build and run the project?
 1. Download this repository to your local machine and import the entiry project to your Unity (recommended Unity version: `Unity 2021.3.8f1`)
 2. The project contains two scenes, one is for loss aversion strategy version, another is for reward strategy version.
-3. Select one of the version that you want to build, and then
+3. Open one of the scenes that you want to build, and then
 4. Go to File -> Build Settings -> Switch to Android Platform
 5. Configure the build settings:\
 5.1 Go to Player Settings -> Android settings -> Other Settings -> Rendering. Untick the `Auto Graphics API` option and only include `OpenGLES3` Graphics API in the Graphics APIs list.
@@ -22,7 +22,7 @@
 
 ## Hardware Requirements
 * This project will only run on Android devices that has Android Operating System version  below 10 (or below Android API level 29). The Android device that we were used to do the user study is `Vivo x9` smartphone with Android OS 7.1.2.
-* Any Android device that wants to install and run this project must support GPS and accelerometer. The proper internet connection is also required, this is because, in order to use the GPS function, the smartphone must connect to the internet.
+* Any Android device that wants to install and run this project must support GPS and accelerometer. When running the App, we recommend you connect to the internet for better GPS accuracy.
 
 ## Data Recording and Data Location
 * The program will automatically record the following data: `Time, Exercise Intensity Value (GPS), Average Moving Steps, Magnet Energy, Level of Reward, Number of Gems, Number of Dragon Babies, Number of Adult Dragons`.
