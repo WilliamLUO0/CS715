@@ -1,7 +1,16 @@
 # COMPSCI 715 - LASER Project - Loss Aversion Strategy Exergame
 
+## Dragon Hunter
+
+We developed an AR exergame called "Dragon Hunter" which applied an economic strategy that is also could be used in the game design. We want to explore whether the players will be motivated more and gain more enjoyments in this version than the traditional reward strategy version. In this case, we designed two versions of the gameplay. Basically, For the "Loss Aversion strategy'', if the user's level reaches 75, i.e., if the corresponding item level is visible as A. Once the system detects that the user has stopped moving, or the movement intensity is significantly lower than the previous data, the ``Dragon Magnet'' charging bar will quickly go to zero, which results in the objects level will turn into C, and if the user restarts the movement and keeps it for a period of time, the charge bar quickly returns to the previous level. 
+
+For the "reward strategy'' version, once players stop moving or they were moving at a low intensity, the item level is C. If the player is moving at a medium intensity, the item level is B. If the player is moving at a high intensity, the item level is A. If the player reaches level 75 and then quit moving for a while and resumes moving at a high intensity, then the item level will change back to A, that is, the item level changes as exercise intensity changes. The ``Dragon Magnet'' charging bar will change as well. 
+
+In order to develop this real-time location-based AR exercising game mobile application, we used Unity and use some of the Unity inside functions like the GPS location function to achieve the goal of monitoring players' exercise intensity. Moreover, we have designed a full set of gaming mechanisms based on the difference in the exercise intensity data. Hope you enjoyed our game.
+
+
 ## How to build and run the project?
-1. Download this repository to your local machine and import the entiry project to your Unity (recommended Unity version: `Unity 2021.3.8f1`)
+1. Download this repository to your local device and import the entire project to your Unity (recommended Unity version: `Unity 2021.3.8f1`)
 2. The project contains two scenes, one is for loss aversion strategy version, another is for reward strategy version.
 3. Open one of the scenes that you want to build, and then
 4. Go to File -> Build Settings -> Switch to Android Platform
